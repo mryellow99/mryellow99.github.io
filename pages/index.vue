@@ -1,42 +1,20 @@
 <template>
   <section class="container">
-    <div>
-      <logo />
-      <h1 class="title">
-        mryellow99.github.io
-      </h1>
-      <h2 class="subtitle">
-        My well-made Nuxt.js project
-      </h2>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          class="button--green"
-        >Documentation</a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          class="button--grey"
-        >GitHub</a>
-      </div>
-    </div>
+      <article class="top_images">
+        <img src="~/assets/top1.jpg">
+        <img src="~/assets/top2.jpg">
+        <div class="double_pieces">
+          <img src="~/assets/top3.jpg">
+          <img src="~/assets/top3.jpg">
+        </div>
+      </article>
   </section>
 </template>
 
-<script>
-import Logo from '~/components/Logo.vue'
-
-export default {
-  components: {
-    Logo
-  }
-}
-</script>
-
-<style>
+<style lang="scss">
 .container {
-  margin: 0 auto;
+  margin: 4% auto 64px;
+  padding: 0 8px;
   min-height: 100vh;
   display: flex;
   justify-content: center;
@@ -44,25 +22,26 @@ export default {
   text-align: center;
 }
 
-.title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
-}
-
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
-
-.links {
-  padding-top: 15px;
+.top_images {
+  max-width: 800px;
+  > img {
+    width: 100%;
+    margin-bottom: 4%;
+  }
+  .double_pieces {
+    display: flex;
+    width: 100%;
+    img {
+      height: 100%;
+      width: 48%;
+      object-fit: contain;
+      &:first-child {
+        margin-right: auto;
+      }
+      &:last-child {
+        margin-left: auto;
+      }
+    }
+  }
 }
 </style>
