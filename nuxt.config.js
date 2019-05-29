@@ -50,5 +50,9 @@ export default {
     */
     extend(config, ctx) {
     }
+  },
+
+  router: {
+    base: '/mryellow99.github.io/'
   }
 }
