@@ -1,0 +1,37 @@
+.container {
+    margin: 4% auto 64px;
+    padding: 0 8px;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.top_images {
+    max-width: 800px;
+
+    >img {
+        width: 100%;
+        margin-bottom: 4%;
+    }
+
+    .double_pieces {
+        display: flex;
+        width: 100%;
+
+        img {
+            height: 100%;
+            width: 48%;
+            object-fit: contain;
+
+            &:first-child {
+                margin-right: auto;
+            }
+
+            &:last-child {
+                margin-left: auto;
+            }
+        }
+    }
+}
